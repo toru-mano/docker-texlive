@@ -9,10 +9,10 @@ IMAGE  = texlive
 .PHONY: latest 18.04 20.04
 
 latest: Dockerfile
-	$(CMD) $(ARG) -t $(NAME)/$(IMAGE):latest .
+	$(CMD) $(ARG) -t $(NAME)/$(IMAGE):$@ .
 
 18.04: 18.04/Dockerfile
-	$(CMD) $(ARG) -t $(NAME)/$(IMAGE):18.04 18.04
+	$(CMD) $(ARG) -t $(NAME)/$(IMAGE):$@ $@
 
 20.04: 20.04/Dockerfile
-	$(CMD) $(ARG) -t $(NAME)/$(IMAGE):18.04 20.04
+	$(CMD) $(ARG) -t $(NAME)/$(IMAGE):$@ $@
