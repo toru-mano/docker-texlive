@@ -20,6 +20,9 @@ latest: Dockerfile
 20.04: 20.04/Dockerfile
 	$(CMD) $(ARG) -t $(NAME)/$(IMAGE):$@ $@
 
+22.10: 22.10/Dockerfile
+	$(CMD) $(ARG) -t $(NAME)/$(IMAGE):$@ $@
+
 push: push-latest push-18.04 push-20.04
 
 push-latest: latest
